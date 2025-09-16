@@ -129,10 +129,10 @@ st.markdown("""
 @st.cache_resource
 def load_model():
     try:
-        with open("best_possum_rf_nocase.pkl", "rb") as f:
+        with open("possum.pkl", "rb") as f:
             return pickle.load(f)
     except FileNotFoundError:
-        st.error("❌ Model file not found! Please ensure 'best_possum_rf_nocase.pkl' is in the correct directory.")
+        st.error("❌ Model file not found! Please ensure 'possum.pkl' is in the correct directory.")
         st.stop()
     except Exception as e:
         st.error(f"❌ Error loading model: {str(e)}")
